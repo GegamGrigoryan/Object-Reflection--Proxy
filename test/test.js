@@ -32,18 +32,19 @@ describe("character", () => {
         const testEqual = [
             {
               id: 8,
-              name: 'Двойной выстрел',
-              icon: 'http://...',
-              description: 'Двойной выстрел наносит двойной урон'
+              name:'Двойной выстрел',
+              icon:'http://...',
+              description:'Двойной выстрел наносит двойной урон'
             },
             {
               id: 9,
-              name: 'Нокаутирующий удар',
-              icon: 'http://...',
-              description: 'Описание недоступно'
+              name:'Нокаутирующий удар',
+              icon:'http://...',
+              description:'Описание недоступно'
             }
           ];
-        expect(getSpecialValue(character)).toEqual(testEqual);
+          const descriptionDefoult='Описание недоступно'
+        expect(getSpecialValue(character,descriptionDefoult)).toEqual(testEqual);
     });
 })
 

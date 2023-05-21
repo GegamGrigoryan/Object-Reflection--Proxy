@@ -20,13 +20,13 @@ export const character = {
     }
   ]
 }
-
-export function getSpecialValue(arr) {
+export function getSpecialValue(arr, descriptionDefoult) {
   let result = []
   for (let key in arr.special) {
-    let { id, name, icon, description = 'Описание недоступно' } = character.special[key]
+    let { id, name, icon, description = descriptionDefoult } = character.special[key]
     result.push({ id, name, description, icon })
   }
   return result
 }
-getSpecialValue(character)
+const descriptionDefoult='Описание недоступно'
+getSpecialValue(character, descriptionDefoult)
